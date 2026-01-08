@@ -167,7 +167,7 @@ export function MySection() {
 | **Import path errors** | Use `@/` alias for src imports (configured in tsconfig) |
 | **Styling not applying** | Check Tailwind class names, rebuild if needed |
 | **Dark mode issues** | Ensure using theme colors, not hardcoded colors |
-| **Build fails** | Check for TypeScript errors and import issues |
+| **Build fails** | Check for TypeScript errors, unused imports, missing dependencies in package.json, or path alias issues |
 
 ---
 

@@ -440,8 +440,10 @@ npm run dev
 
 ### This Repository:  `ai-prompt-shop-launchpad-create-sell-digital-prompt-products-effortlessly-remix`
 
+> **Note**: Check `package.json` for current versions - this documentation may lag behind dependency updates.
+
 **Tech Stack**:
-- **Frontend**: React 19 + Vite 7 + TypeScript 5.9
+- **Frontend**: React 19+ + Vite 7+ + TypeScript 5.9+
 - **UI Library**: Radix UI (comprehensive component library)
 - **Styling**: Tailwind CSS + tailwindcss-animate
 - **Form Handling**: react-hook-form + Zod for validation
@@ -461,7 +463,7 @@ npm run dev
 - **No Backend**: This is a static landing page (no API routes or server functions)
 
 **Known Constraints**:
-- ⚠️ **No tests yet**: Testing infrastructure not set up (consider Vitest if tests needed)
+- ⚠️ **No tests yet**: Testing infrastructure not set up (check `package.json` scripts to verify current state; consider Vitest if tests needed)
 - ✅ **TypeScript**: Full TypeScript support with strict type checking
 - ✅ **Modern React**: Using React 19 with latest patterns
 - ⚠️ **Static only**: No backend/API - this is a landing page application
