@@ -22,22 +22,27 @@ export function LaunchWeekSection() {
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
             Launch a Prompt-Powered Offer in <span className="text-primary italic">7 Days</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            You don't need to be techy or a copywriter. Inside the kit, you get a complete system: prompts + templates + examples.
-          </p>
+          <div className="space-y-6 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl font-bold text-foreground">
+              You don't need to be techy. You don't need to be a copywriter. You just need a clear plan.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Inside the kit, you're not just getting random prompts. You're getting a system: prompts + templates + examples. That means you can move from “idea” to “live offer” in a matter of days—not months.
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-16">
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
-              <Card key={index} className="p-8 glass-card text-center group hover:bg-white/10 transition-all duration-300">
-                <p className="text-primary text-xs font-black uppercase tracking-widest mb-6">{step.day}</p>
+              <Card key={index} className="p-8 glass-card text-center group hover:bg-white/10 transition-all duration-300 border-primary/10">
                 <div className="mb-6 flex justify-center">
                   <div className="w-16 h-16 bg-primary/20 rounded-[2rem] flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-transform">
                     <Icon className="h-8 w-8 text-primary" />
                   </div>
                 </div>
+                <p className="text-xs text-primary font-black uppercase tracking-widest mb-2">Step {index + 1}</p>
                 <p className="text-base font-bold leading-snug">{step.text}</p>
               </Card>
             );

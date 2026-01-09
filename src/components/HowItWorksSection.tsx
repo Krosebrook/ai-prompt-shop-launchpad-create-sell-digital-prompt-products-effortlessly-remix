@@ -5,28 +5,28 @@ export function HowItWorksSection() {
   const steps = [
     {
       icon: Download,
-      title: "Get Your Library",
+      title: "Step 1 – Get Your Library",
       description: "Log in and unlock 125+ prompts you can use, customize, and turn into your own products.",
     },
     {
       icon: Users,
-      title: "Choose Your Niche",
-      description: "Decide who you're serving—coaches, creators, or local businesses.",
+      title: "Step 2 – Choose Your Niche",
+      description: "Decide who you're serving—coaches, course creators, content creators, local businesses, or your current audience.",
     },
     {
       icon: FileText,
-      title: "Plug Into Templates",
-      description: "Use included product and sales page templates to turn prompts into clear offers.",
+      title: "Step 3 – Plug Into Proven Templates",
+      description: "Use the included product and sales page templates to turn prompts into clear offers (packs, kits, memberships, or services).",
     },
     {
       icon: Upload,
-      title: "Publish Your Offer",
-      description: "Upload your product into your preferred platform and start sharing the link.",
+      title: "Step 4 – Publish Your First Offer",
+      description: "Upload your product into your preferred platform (Blink, Gumroad, Shopify, ThriveCart, etc.) and start sharing the link.",
     },
     {
       icon: TrendingUp,
-      title: "Refine and Scale",
-      description: "Add new packs, raise prices, or turn your shop into a subscription.",
+      title: "Step 5 – Rinse, Refine, and Scale",
+      description: "Add new prompt packs, raise prices, bundle your shop with services, or turn it into a subscription.",
     },
   ];
 

@@ -25,43 +25,43 @@ export function PricingSection() {
           </p>
         </div>
 
-        <Card className="relative overflow-hidden glass-card rounded-[2rem] border-primary/20 shadow-2xl">
+        <Card className="relative overflow-hidden glass-card rounded-[2rem] border-primary/20 shadow-2xl group">
           <div className="absolute top-0 right-0 p-8">
-            <Sparkles className="h-12 w-12 text-primary opacity-20" />
+            <Sparkles className="h-12 w-12 text-primary opacity-20 group-hover:opacity-40 transition-opacity" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2">
-            <div className="p-8 md:p-12 space-y-8 bg-white/5">
+            <div className="p-8 md:p-12 space-y-8 bg-white/[0.02]">
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold">What's Included:</h3>
                 <ul className="space-y-4">
                   {benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start gap-3 group">
-                      <div className="mt-1 bg-primary/20 p-0.5 rounded-full group-hover:scale-110 transition-transform">
+                    <li key={index} className="flex items-start gap-3 group/item">
+                      <div className="mt-1 bg-primary/20 p-1 rounded-full group-hover/item:scale-110 transition-transform shrink-0">
                         <CheckCircle2 className="h-5 w-5 text-primary" />
                       </div>
-                      <span className="text-lg text-foreground/90 leading-tight">{benefit}</span>
+                      <span className="text-lg text-foreground/90 leading-tight group-hover/item:text-foreground transition-colors">{benefit}</span>
                     </li>
                   ))}
                 </ul>
               </div>
             </div>
 
-            <div className="p-8 md:p-12 flex flex-col justify-center items-center text-center space-y-8 bg-primary/5">
+            <div className="p-8 md:p-12 flex flex-col justify-center items-center text-center space-y-8 bg-primary/[0.03] border-l border-white/5">
               <div className="space-y-2">
                 <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary">Special Launch Offer</p>
                 <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-6xl font-black tracking-tighter">$99</span>
+                  <span className="text-7xl font-black tracking-tighter text-gradient">$99</span>
                   <span className="text-muted-foreground font-medium">USD</span>
                 </div>
-                <p className="text-muted-foreground">One-Time Payment • Lifetime Access</p>
+                <p className="text-muted-foreground font-medium">One-Time Payment • Lifetime Access</p>
               </div>
 
               <div className="w-full space-y-4">
-                <Button size="lg" className="w-full text-xl px-8 py-8 h-auto rounded-2xl shadow-glow hover:scale-[1.02] transition-all">
+                <Button size="lg" className="w-full text-xl px-8 py-8 h-auto rounded-2xl shadow-glow hover:scale-[1.05] active:scale-95 transition-all duration-300">
                   Get Immediate Access
                 </Button>
-                <p className="text-xs text-muted-foreground px-4">
+                <p className="text-sm text-muted-foreground px-4 leading-relaxed">
                   Use the prompts for your own business or turn them into products for your audience—your choice.
                 </p>
               </div>

@@ -10,7 +10,7 @@ export function FAQSection() {
   const faqs = [
     {
       question: "Do I need advanced AI experience?",
-      answer: "No. The prompts are written in plain language, with clear instructions so beginners can use them. If you can copy and paste, you can use this.",
+      answer: "No. The prompts are written in plain language, with clear instructions so beginners can use them.",
     },
     {
       question: "Can I rebrand and resell the prompts?",
@@ -18,7 +18,7 @@ export function FAQSection() {
     },
     {
       question: "What if I only want to use the prompts in my own business?",
-      answer: "That's completely fine. Many buyers use this purely as their private prompt library for content, workflows, and client offers.",
+      answer: "That’s completely fine. Many buyers use this purely as their private prompt library for content, workflows, and offers.",
     },
   ];
 

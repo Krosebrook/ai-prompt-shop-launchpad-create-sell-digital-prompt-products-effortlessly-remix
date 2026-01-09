@@ -26,7 +26,7 @@ export function WhatsInsideSection() {
     },
     {
       icon: Users,
-      title: "Community Access",
+      title: "Community Access (Optional)",
       description: "Access to a private community where others are building prompt-based offers and shops.",
     },
   ];

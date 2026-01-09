@@ -21,12 +21,12 @@ export function FinalCTASection() {
             
             <div className="space-y-6 max-w-3xl mx-auto">
               <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-                Stop guessing. Start building. Use a complete, customizable system that's already done 90% of the heavy lifting for you.
+                You can keep trying to figure everything out from scratch—or you can start from a complete, customizable system that’s already done most of the heavy lifting.
               </p>
               
               <p className="text-lg md:text-xl font-medium">
-                Use them personally. Sell them as products. Scale your business. 
-                <span className="block text-primary mt-2">The choice is yours. The system is ready.</span>
+                Use the prompts personally. Turn them into products. Or do both.
+                <span className="block text-primary mt-2">Either way, you’ll finally have a way to plug AI into your business in a way that actually makes sense.</span>
               </p>
             </div>
             
@@ -36,7 +36,7 @@ export function FinalCTASection() {
               </Button>
               <div className="flex flex-col items-center gap-2">
                 <p className="text-sm font-bold uppercase tracking-widest text-primary">
-                  One-Time Payment • Instant Access
+                  Instant Access
                 </p>
                 <p className="text-muted-foreground italic">
                   "Your prompt shop can be live faster than you think."

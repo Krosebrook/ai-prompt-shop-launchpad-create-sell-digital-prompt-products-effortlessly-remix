@@ -35,14 +35,9 @@ export function HeroSection() {
           <Button size="lg" className="text-xl px-12 py-8 h-auto rounded-full shadow-glow hover:scale-105 transition-all duration-300">
             Get Instant Access
           </Button>
-          <div className="space-y-1">
-            <p className="text-sm font-medium">
-              Lifetime access. No subscriptions.
-            </p>
-            <p className="text-xs text-muted-foreground uppercase tracking-widest">
-              Start selling as soon as this week
-            </p>
-          </div>
+          <p className="text-sm text-muted-foreground font-medium">
+            Lifetime access. No subscriptions. Start selling as soon as this week.
+          </p>
         </div>
       </div>
     </section>
