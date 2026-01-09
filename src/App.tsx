@@ -1,3 +1,4 @@
+import { Navbar } from "./components/Navbar";
 import { HeroSection } from "./components/HeroSection";
 import { WhyNowSection } from "./components/WhyNowSection";
 import { WindowSection } from "./components/WindowSection";
@@ -13,7 +14,8 @@ import { Footer } from "./components/Footer";
 
 function App() {
   return (
-    <div className="dark min-h-screen bg-background text-foreground">
+    <div className="dark min-h-screen bg-background text-foreground selection:bg-primary/30">
+      <Navbar />
       <HeroSection />
       <WhyNowSection />
       <WindowSection />
@@ -30,4 +32,4 @@ function App() {
   );
 }
 
-export default App 
+export default App;

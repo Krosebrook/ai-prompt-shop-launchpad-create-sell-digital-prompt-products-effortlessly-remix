@@ -59,6 +59,10 @@ module.exports = {
   				'5': 'hsl(var(--chart-5))'
   			}
   		},
+  		boxShadow: {
+  			elegant: 'var(--shadow-elegant)',
+  			glow: 'var(--shadow-glow)'
+  		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
@@ -66,13 +70,16 @@ module.exports = {
   		},
   		fontFamily: {
   			sans: [
-  				'var(--font-sans)'
+  				'var(--font-body)'
   			],
   			serif: [
-  				'var(--font-serif)'
+  				'var(--font-heading)'
   			],
-  			mono: [
-  				'var(--font-mono)'
+  			heading: [
+  				'var(--font-heading)'
+  			],
+  			body: [
+  				'var(--font-body)'
   			]
   		},
   		animation: {
