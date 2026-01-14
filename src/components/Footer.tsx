@@ -1,6 +1,24 @@
 import { Rocket } from "lucide-react";
 
 export function Footer() {
+  const footerLinks = {
+    product: [
+      { label: 'Browse Prompts', href: '/products' },
+      { label: 'Bundles', href: '/bundles' },
+      { label: 'Pricing', href: '/#pricing' },
+    ],
+    company: [
+      { label: 'About', href: '/about' },
+      { label: 'Contact', href: '/contact' },
+      { label: 'Blog', href: '/blog' },
+    ],
+    legal: [
+      { label: 'Privacy Policy', href: '/privacy' },
+      { label: 'Terms of Service', href: '/terms' },
+      { label: 'Refund Policy', href: '/refunds' },
+    ],
+  };
+
   return (
     <footer className="py-16 px-4 border-t border-white/5 bg-black/20">
       <div className="max-w-7xl mx-auto flex flex-col items-center space-y-8">

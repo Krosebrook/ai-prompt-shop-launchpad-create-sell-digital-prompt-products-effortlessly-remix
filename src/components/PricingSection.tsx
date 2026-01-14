@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Sparkles } from "lucide-react";
@@ -9,6 +10,15 @@ export function PricingSection() {
     "Turn them into your own bundles, kits, or memberships",
     "Keep 100% of the revenue from your own sales",
     "Grow at your pace—no subscriptions, no inventory",
+  ];
+
+  const included = [
+    "125+ Pre-Written AI Prompt Systems",
+    "Product & Sales Page Templates",
+    "AI Training Tutorials",
+    "Licensing & Usage Guides",
+    "Private Community Access",
+    "Lifetime Updates",
   ];
 
   return (
@@ -72,6 +82,18 @@ export function PricingSection() {
                 <div className="h-6 w-12 bg-white/10 rounded" />
               </div>
             </div>
+          </div>
+
+          {/* Or buy individual */}
+          <div className="mt-8 pt-8 border-t border-border text-center">
+            <p className="text-muted-foreground mb-4">
+              Or browse individual prompts starting at $7.99
+            </p>
+            <Button variant="outline" asChild>
+              <Link to="/products">
+                Browse Individual Prompts
+              </Link>
+            </Button>
           </div>
         </Card>
       </div>

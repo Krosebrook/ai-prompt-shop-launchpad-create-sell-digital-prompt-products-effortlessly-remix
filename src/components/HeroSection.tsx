@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
+import { ArrowRight, Sparkles } from 'lucide-react';
 
 export function HeroSection() {
   return (
@@ -39,6 +41,10 @@ export function HeroSection() {
             Lifetime access. No subscriptions. Start selling as soon as this week.
           </p>
         </div>
+
+        <p className="text-sm text-muted-foreground">
+          Lifetime access. No subscriptions. Start selling as soon as this week.
+        </p>
       </div>
     </section>
   );
