@@ -1,49 +1,56 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Download, Target, Palette, Share2, BarChart3 } from "lucide-react";
+import { Download, Target, Palette, Share2, BarChart3, Calendar } from "lucide-react";
 
 export function LaunchWeekSection() {
   const steps = [
-    { icon: Download, text: "Download your prompts" },
-    { icon: Target, text: "Pick your first offer (pack, kit, or mini membership)" },
-    { icon: Palette, text: "Customize your sales page in Blink" },
-    { icon: Share2, text: "Share the link with your audience" },
-    { icon: BarChart3, text: "Improve and expand based on what sells" },
+    { icon: Download, text: "Download your prompts", day: "Day 1-2" },
+    { icon: Target, text: "Pick your first offer", day: "Day 3" },
+    { icon: Palette, text: "Customize your page", day: "Day 4-5" },
+    { icon: Share2, text: "Share your link", day: "Day 6" },
+    { icon: BarChart3, text: "Scale what sells", day: "Day 7" },
   ];
 
   return (
-    <section className="py-20 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Launch a Prompt-Powered Offer in <span className="text-primary">7 Days</span>
+    <section className="py-24 px-4 bg-secondary/10 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="text-center mb-20 space-y-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-bold uppercase tracking-wider mb-4">
+            <Calendar className="h-4 w-4" />
+            Launch in a Week
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+            Launch a Prompt-Powered Offer in <span className="text-primary italic">7 Days</span>
           </h2>
-          <p className="text-xl text-muted-foreground mb-4">
-            You don't need to be techy. You don't need to be a copywriter. You just need a clear plan.
-          </p>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Inside the kit, you're not just getting random prompts. You're getting a system: prompts + templates + examples. That means you can move from "idea" to "live offer" in a matter of days—not months.
-          </p>
+          <div className="space-y-6 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl font-bold text-foreground">
+              You don't need to be techy. You don't need to be a copywriter. You just need a clear plan.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Inside the kit, you're not just getting random prompts. You're getting a system: prompts + templates + examples. That means you can move from “idea” to “live offer” in a matter of days—not months.
+            </p>
+          </div>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-16">
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
-              <Card key={index} className="p-6 bg-card/50 backdrop-blur text-center">
-                <div className="mb-4 flex justify-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+              <Card key={index} className="p-8 glass-card text-center group hover:bg-white/10 transition-all duration-300 border-primary/10">
+                <div className="mb-6 flex justify-center">
+                  <div className="w-16 h-16 bg-primary/20 rounded-[2rem] flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-transform">
                     <Icon className="h-8 w-8 text-primary" />
                   </div>
                 </div>
-                <p className="text-sm font-medium">{step.text}</p>
+                <p className="text-xs text-primary font-black uppercase tracking-widest mb-2">Step {index + 1}</p>
+                <p className="text-base font-bold leading-snug">{step.text}</p>
               </Card>
             );
           })}
         </div>
 
         <div className="text-center">
-          <Button size="lg" className="text-lg px-8 py-6 h-auto">
+          <Button size="lg" className="text-xl px-12 py-8 h-auto rounded-2xl shadow-glow hover:scale-[1.02] transition-all">
             Start Building Your Prompt Shop
           </Button>
         </div>

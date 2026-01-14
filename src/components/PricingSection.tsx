@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { CheckCircle2, Sparkles, ArrowRight } from "lucide-react";
+import { CheckCircle2, Sparkles } from "lucide-react";
 
 export function PricingSection() {
   const benefits = [
@@ -23,62 +22,66 @@ export function PricingSection() {
   ];
 
   return (
-    <section id="pricing" className="py-20 px-4">
-      <div className="max-w-4xl mx-auto">
-        <Card className="p-8 md:p-12 bg-gradient-to-br from-primary/5 via-background to-purple-500/5 border-primary/20">
-          <div className="text-center mb-8">
-            <Badge className="mb-4 bg-primary/20 text-primary border-primary/30">
-              <Sparkles className="h-3 w-3 mr-1" />
-              Complete Launch Kit
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              The AI Prompt Shop Launch Kit
-            </h2>
-            <div className="inline-block">
-              <div className="flex items-baseline justify-center gap-2">
-                <p className="text-5xl font-bold text-primary">$99</p>
-                <p className="text-lg text-muted-foreground line-through">$199</p>
-              </div>
-              <p className="text-muted-foreground mt-1">One-Time Payment • Save 50%</p>
-            </div>
+    <section className="py-24 px-4 relative">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 blur-[150px] rounded-full pointer-events-none" />
+      
+      <div className="max-w-4xl mx-auto relative z-10">
+        <div className="text-center mb-16 space-y-4">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+            The AI Prompt Shop <span className="text-primary italic">Launch Kit</span>
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Get everything you need to start earning with AI prompts today.
+          </p>
+        </div>
+
+        <Card className="relative overflow-hidden glass-card rounded-[2rem] border-primary/20 shadow-2xl group">
+          <div className="absolute top-0 right-0 p-8">
+            <Sparkles className="h-12 w-12 text-primary opacity-20 group-hover:opacity-40 transition-opacity" />
           </div>
 
-          {/* What's Included */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <div>
-              <h3 className="font-semibold mb-4">What You Get:</h3>
-              <div className="space-y-3">
-                {included.map((item, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                    <span>{item}</span>
-                  </div>
-                ))}
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="p-8 md:p-12 space-y-8 bg-white/[0.02]">
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold">What's Included:</h3>
+                <ul className="space-y-4">
+                  {benefits.map((benefit, index) => (
+                    <li key={index} className="flex items-start gap-3 group/item">
+                      <div className="mt-1 bg-primary/20 p-1 rounded-full group-hover/item:scale-110 transition-transform shrink-0">
+                        <CheckCircle2 className="h-5 w-5 text-primary" />
+                      </div>
+                      <span className="text-lg text-foreground/90 leading-tight group-hover/item:text-foreground transition-colors">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
-            <div>
-              <h3 className="font-semibold mb-4">You Can:</h3>
-              <div className="space-y-3">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                    <span>{benefit}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
 
-          <div className="text-center space-y-4">
-            <Button size="lg" className="w-full md:w-auto text-lg px-12 py-6 h-auto" asChild>
-              <Link to="/bundles">
-                Get the Complete Kit
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            <p className="text-sm text-muted-foreground">
-              30-day money-back guarantee. No questions asked.
-            </p>
+            <div className="p-8 md:p-12 flex flex-col justify-center items-center text-center space-y-8 bg-primary/[0.03] border-l border-white/5">
+              <div className="space-y-2">
+                <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary">Special Launch Offer</p>
+                <div className="flex items-baseline justify-center gap-1">
+                  <span className="text-7xl font-black tracking-tighter text-gradient">$99</span>
+                  <span className="text-muted-foreground font-medium">USD</span>
+                </div>
+                <p className="text-muted-foreground font-medium">One-Time Payment • Lifetime Access</p>
+              </div>
+
+              <div className="w-full space-y-4">
+                <Button size="lg" className="w-full text-xl px-8 py-8 h-auto rounded-2xl shadow-glow hover:scale-[1.05] active:scale-95 transition-all duration-300">
+                  Get Immediate Access
+                </Button>
+                <p className="text-sm text-muted-foreground px-4 leading-relaxed">
+                  Use the prompts for your own business or turn them into products for your audience—your choice.
+                </p>
+              </div>
+
+              <div className="flex items-center gap-4 pt-4 grayscale opacity-50">
+                <div className="h-6 w-12 bg-white/10 rounded" />
+                <div className="h-6 w-12 bg-white/10 rounded" />
+                <div className="h-6 w-12 bg-white/10 rounded" />
+              </div>
+            </div>
           </div>
 
           {/* Or buy individual */}
